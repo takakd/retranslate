@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LangSelect matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="dropdown"
+  >
+    <button
+      aria-expanded="false"
+      aria-haspopup="true"
+      class="dropdown-toggle btn btn-secondary"
+      type="button"
+    >
+      Japanese
+    </button>
+    <div
+      aria-labelledby=""
+      class="dropdown-menu"
+      style="position: absolute; top: 0px; left: 0px; opacity: 0; pointer-events: none; margin: 0px;"
+      x-placement="bottom-start"
+    >
+      <button
+        class="dropdown-item"
+      >
+        Japanese
+      </button>
+      <button
+        class="dropdown-item"
+      >
+        English
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

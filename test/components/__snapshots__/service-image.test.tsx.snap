@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ServiceImage matches aws snapshot 1`] = `
+<DocumentFragment>
+  <img
+    alt="aws"
+    height="20"
+    src="/logo-aws.png"
+    width="28"
+  />
+</DocumentFragment>
+`;
+
+exports[`ServiceImage matches google snapshot 1`] = `
+<DocumentFragment>
+  <img
+    alt="aws"
+    height="20"
+    src="/logo-aws.png"
+    width="28"
+  />
+</DocumentFragment>
+`;
