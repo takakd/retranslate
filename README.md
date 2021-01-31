@@ -76,6 +76,7 @@ $ yarn install
 
 ```sh
 .
+|-- .env.example        <-- Environment variables example
 |-- .env.local          <-- Environment variables on local
 |-- .next               <-- Next.js build assets
 |-- LICENSE
