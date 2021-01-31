@@ -8,12 +8,10 @@
     "build": "next build",
     "start": "next start",
     "type-check": "tsc --pretty --noEmit",
-    "format": "prettier --write .",
+    "format": "prettier --write . && eslint . --ext js,jsx,ts,tsx --fix --max-warnings=0",
     "lint": "eslint . --ext js,jsx,ts,tsx --max-warnings=0",
-    "fix": "yarn format && eslint . --ext js,jsx,ts,tsx --fix --max-warnings=0",
-    "test": "jest",
-    "test-all": "yarn lint && yarn type-check && yarn test",
-    "test-snap-update": "jest --updateSnapshot"
+    "test": "yarn lint && yarn type-check && jest",
+    "test-snap": "jest --updateSnapshot"
   },
   "dependencies": {
     "bootstrap": "^4.6.0",

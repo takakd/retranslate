@@ -84,7 +84,7 @@ export class Translator {
       if (typeof v === 'undefined') {
         throw new Error(`error: undefined ${key}`)
       }
-      output[key] = v
+      output[key] = v.getText()
     }
     return output
   }

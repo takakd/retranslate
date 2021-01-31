@@ -175,7 +175,7 @@ export default ({ apiUrl }) => {
     <div className="position-relative root">
       <Head>
         <title>Retranslate</title>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
       </Head>
 
       <header className="navbar navbar-dark bg-info fixed-top header py-0">
