@@ -20,21 +20,21 @@
 ## Features
 
 - Translate text with Google Translation API and Amazon Translate API.
-- Retranslate translated text.
+- Translate translated text again.
 
 ## Usage
 
 <p align="center"><img src="docs/usage.gif"/></p>
 
-Select source language and enter text, then text is translated.
+Select a source language and enter text, and they will be translated after a while.
 
 ## Development
 
 ### Tech stacks
 
-- TypeScript, Node.js, Bash
+- TypeScript, Node.js
 - React, Next.js
-- gRPC
+- gRPC WEB
 
 ### Setup
 
@@ -43,6 +43,8 @@ Select source language and enter text, then text is translated.
 - macOS 10.15.5
 - [Node.js](https://nodejs.org/en/) v14.15.3, npm 6.14.9
 - [Yarn](https://yarnpkg.com/) v1.22.10
+
+We tested in the above environment.
 
 #### Install npm modules
 
@@ -57,16 +59,16 @@ $ yarn install
 | dev        | Run on local in development mode |
 | build      | Build app for production         |
 | start      | Run production server            |
-| type-check | Check type                       |
-| format     | Format code                      |
-| lint       | Lint code                        |
+| type-check | Check type by tsc                |
+| format     | Format codes                     |
+| lint       | Lint codes                       |
 | test       | Run lint, type check and tests   |
 | test-snap  | Update snapshot in jest          |
 
 ### Structure
 
-- Application is constructed with Next.js.
-- Call gRPC API through envoy.
+- Application is constructed on Next.js.
+- Call [Translation gRPC API]().
 
 #### Design
 
@@ -78,8 +80,6 @@ $ yarn install
 .
 |-- .env.example        <-- Environment variables example
 |-- .env.local          <-- Environment variables on local
-|-- .next               <-- Next.js build assets
-|-- LICENSE
 |-- README.md
 |-- README.next.md          <-- Next.js readme
 |-- api                     <-- API classes
