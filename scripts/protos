@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+CUR_DIR=$(cd $(dirname "$0"); pwd)
+PROTO_DEST=${CUR_DIR}/../grpc
+PROTO_DIR="$1"
+PROTO_SRC="${PROTO_DIR}/*.proto"
+
+if [[ "$#" -lt 1 ]]; then
+    cat <<_EOT_
+Usage:
+    protos <proto directory>
+
+set a directory path included .proto files to <proto directory>
+_EOT_
+    exit 0
+fi
+
+mkdir -p "$PROTO_DEST"
+
+# Generate TypeScript code
+protoc \
+    --js_out=import_style=commonjs:${PROTO_DEST} \
+    --grpc-web_out=import_style=typescript,mode=grpcwebtext:${PROTO_DEST} \
+    --plugin=protoc-gen-grpc-web=${CUR_DIR}/../node_modules/.bin/protoc-gen-grpc-web \
+    -I $PROTO_DIR \
+    $PROTO_SRC

@@ -1,34 +1,122 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center"><img src="docs/logo.svg" width="80"/></p>
 
-## Getting Started
+<h1 align="center">Retranslate</h1>
 
-First, run the development server:
+<p align="center">Retranslate text with <a href="https://cloud.google.com/translate">Google Translation</a> and <a href="https://aws.amazon.com/jp/translate/">Amazon Translate</a>.</p>
 
-```bash
-npm run dev
-# or
-yarn dev
+<p align="center">
+<a target="_blank" rel="noopener noreferrer" href="https://camo.githubusercontent.com/a568b3692dcc72af17d4abfed1b2c81d47f05dcaaefb021c9f9d3d6a856d3e6e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d4d49542d696e666f726d6174696f6e616c3f7374796c653d666c6174"><img src="https://camo.githubusercontent.com/a568b3692dcc72af17d4abfed1b2c81d47f05dcaaefb021c9f9d3d6a856d3e6e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d4d49542d696e666f726d6174696f6e616c3f7374796c653d666c6174" alt="License-MIT" data-canonical-src="https://img.shields.io/badge/License-MIT-informational?style=flat" style="max-width:100%;"></a>
+</p>
+
+<br>
+
+## Table of Contents
+
+- [Features](#features)
+- [Usage](#usage)
+- [Development](#development)
+- [License](#license)
+
+## Features
+
+- Translate text with Google Translation API and Amazon Translate API.
+- Translate translated text again.
+
+## Usage
+
+<p align="center"><img src="docs/usage.gif"/></p>
+
+Select a source language and enter text, and they will be translated after a while.
+
+## Development
+
+### Tech stacks
+
+- TypeScript, Node.js
+- React, Next.js
+- gRPC WEB
+
+### Setup
+
+#### Requirements
+
+- macOS 10.15.5
+- [Node.js](https://nodejs.org/en/) v14.15.3, npm 6.14.9
+- [Yarn](https://yarnpkg.com/) v1.22.10
+
+We tested in the above environment.
+
+#### Install npm modules
+
+```sh
+$ yarn install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### npm commands
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+| Command    | details                          |
+| ---------- | -------------------------------- |
+| dev        | Run on local in development mode |
+| build      | Build app for production         |
+| start      | Run production server            |
+| type-check | Check type by tsc                |
+| format     | Format codes                     |
+| lint       | Lint codes                       |
+| test       | Run lint, type check and tests   |
+| test-snap  | Update snapshot in jest          |
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### Structure
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- Application is constructed on Next.js.
+- Call [Translation gRPC API]().
 
-## Learn More
+#### Design
 
-To learn more about Next.js, take a look at the following resources:
+![Design](docs/design.jpg?raw=true)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+#### Sources
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```sh
+.
+|-- .env.example        <-- Environment variables example
+|-- .env.local          <-- Environment variables on local
+|-- README.md
+|-- README.next.md          <-- Next.js readme
+|-- api                     <-- API classes
+|   `-- translator.ts
+|
+|-- components              <-- React components
+|   |-- github-corner.tsx   <-- GitHub corner icon
+|   |-- lang-select.tsx     <-- Language select
+|   |-- service-image.tsx   <-- Translation service image
+|   `-- text-box.tsx        <-- Text box
+|
+|-- grpc                    <-- Auto generated gRPC classes
+|-- next-env.d.ts           <-- Ensuring Next.js types for TypeScript
+|-- pages           <-- Next.js pages
+|   |-- _app.tsx
+|   `-- index.tsx   <-- Home page
+|
+|-- public
+|   |-- favicon.png
+|   |-- logo-aws.png        <-- Amazon logo
+|   `-- logo-google.png     <-- Google logo
+|
+|-- scripts
+|   `-- protos      <-- Script to generate gRPC classes with .proto
+|
+`-- test        <-- jest tests files
+```
 
-## Deploy on Vercel
+## Get in touch
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [Dev.to](https://dev.to/takakd)
+- [Twitter](https://twitter.com/takakdkd)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contributing
+
+Issues and reviews are welcome. Don't hesitate to create issues and PR.
+
+## License
+
+- Copyright 2020 © takakd.
