@@ -1,5 +1,5 @@
-import { Translator } from '../../api/translator'
-import { LangType } from '../../grpc/translator_pb'
+import {Translator} from '../../api/translator'
+import {LangType} from '../../grpc/translator_pb'
 
 const mockTranslateRequest = {
   setSrclang: jest.fn().mockReturnThis(),
@@ -60,12 +60,20 @@ describe('Translator', () => {
       aws: 'aws translated',
       google: 'google translated',
     }
+    const mockRet = {
+      aws: {
+        getText: jest.fn().mockReturnValue(ret['aws']),
+      },
+      google: {
+        getText: jest.fn().mockReturnValue(ret['google']),
+      },
+    }
 
     mockGetTranslatedtextlistMap.mockReturnValue({
       get: jest
         .fn()
-        .mockReturnValueOnce(ret['aws'])
-        .mockReturnValueOnce(ret['google']),
+        .mockReturnValueOnce(mockRet['aws'])
+        .mockReturnValueOnce(mockRet['google']),
     })
 
     const t = new Translator(10, 'https://example.com')

@@ -3,20 +3,20 @@
 exports[`TextBox matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="jsx-2257911049 jsx-262184527 d-flex flex-row align-items-center w-100 undefined"
+    class="jsx-128387205 jsx-2279296546 d-flex flex-row align-items-center w-100 text-box"
   >
     <div
-      class="jsx-2257911049 jsx-262184527 icon"
+      class="jsx-128387205 jsx-2279296546 icon"
     >
       <div
         class="spinner-border spinner-border-sm"
       />
     </div>
     <div
-      class="jsx-2257911049 jsx-262184527 d-flex flex-column undefined-text-container"
+      class="jsx-128387205 jsx-2279296546 d-flex flex-column text-box-text-container"
     >
       <div
-        class="jsx-2257911049 jsx-262184527 undefined-header"
+        class="jsx-128387205 jsx-2279296546 text-box-header"
       >
         <img
           alt="google"
@@ -26,16 +26,16 @@ exports[`TextBox matches snapshot 1`] = `
         />
       </div>
       <div
-        class="jsx-2257911049 jsx-262184527 position-relative w-100 undefined-textarea-container"
+        class="jsx-128387205 jsx-2279296546 position-relative w-100 text-box-textarea-container"
       >
         <textarea
-          class="jsx-2257911049 jsx-262184527 h-100 undefined-textarea"
+          class="jsx-128387205 jsx-2279296546 h-100 text-box-textarea"
           placeholder="placeholder"
         >
           test
         </textarea>
         <svg
-          class="position-absolute undefined-clipboard-button"
+          class="position-absolute text-box-clipboard-button"
           fill="currentColor"
           height="1em"
           viewBox="0 0 16 16"
