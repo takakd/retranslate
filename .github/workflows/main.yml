@@ -20,10 +20,11 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
+    env:
+      GRPC_ADDR: ${{ secrets.GRPC_ADDR }}
+
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      env:
-        GRPC_ADDR: ${{ secrets.GRPC_ADDR }}
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
