@@ -42,4 +42,5 @@ jobs:
         uses: EndBug/add-and-commit@v7
         with:
           branch: work-commit
-          add: 'out'
+          # Add force because out is ignored.
+          add: 'out --force'
