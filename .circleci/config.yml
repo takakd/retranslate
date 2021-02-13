@@ -7,16 +7,16 @@ orbs:
 
 jobs:
   test:
-    docker:
-      - image: 'cimg/base:stable'
+    executor: node/default
     steps:
-      # Build
       - checkout
       - node/install:
           node-version: "14"
-      - run: npm run format
-      - run: npm run test
-      - run: npm run build
+      - run:
+          command: >
+            npm run format
+            npm run test
+            npm run build
 #      # Send status to slack.
 #      - slack/status:
 #          success_message: "Test is OK.🤗"
@@ -31,9 +31,13 @@ jobs:
           command: >
             echo "The command above installs Heroku, the command below deploys.
             What you do inbetween is up to you!"
+            ls -la ./out
+            ls -la
       - heroku/deploy-via-git
 workflows:
   test:
     jobs:
       - test
-      - deploy
+      - deploy:
+          requires:
+            - test
