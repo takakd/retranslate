@@ -11,7 +11,8 @@
     "format": "prettier --write . && eslint . --ext js,jsx,ts,tsx --fix --max-warnings=0",
     "lint": "eslint . --ext js,jsx,ts,tsx --max-warnings=0",
     "test": "yarn lint && yarn type-check && jest",
-    "test-snap": "jest --updateSnapshot"
+    "test-snap": "jest --updateSnapshot",
+    "heroku-postbuild": "next build && next export"
   },
   "dependencies": {
     "bootstrap": "^4.6.0",
