@@ -17,22 +17,23 @@ jobs:
       - run: npm run format
       - run: npm run test
       - run: npm run build
-
-      # Deploy to Heroku
-      - heroku/install
-      - run:
-        command: >
-            echo "The command above installs Heroku, the command below deploys.
-            What you do inbetween is up to you!"
-      - heroku/deploy-via-git:
-
 #      # Send status to slack.
 #      - slack/status:
 #          success_message: "Test is OK.🤗"
 #          failure_message: "Test Failed.🥺"
 #          webhook: $SLACK_WEBHOOK
-
+  deploy:
+    executor: heroku/default
+    steps:
+      - checkout
+      - heroku/install
+      - run:
+          command: >
+            echo "The command above installs Heroku, the command below deploys.
+            What you do inbetween is up to you!"
+      - heroku/deploy-via-git:
 workflows:
   test:
     jobs:
       - test
+      - deploy
