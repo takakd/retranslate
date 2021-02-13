@@ -3,19 +3,24 @@
   "author": "@erikdstock",
   "license": "MIT",
   "version": "1.0.0",
+  "engines": {
+    "node": "14.15.3",
+    "npm": "6.14.9"
+  },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "type-check": "tsc --pretty --noEmit",
     "format": "prettier --write . && eslint . --ext js,jsx,ts,tsx --fix --max-warnings=0",
     "lint": "eslint . --ext js,jsx,ts,tsx --max-warnings=0",
-    "test": "yarn lint && yarn type-check && jest",
-    "test-snap": "jest --updateSnapshot"
+    "test": "npm run lint && npm run type-check && jest",
+    "test-snap": "jest --updateSnapshot",
+    "heroku-postbuild": "next build && next export"
   },
   "dependencies": {
     "bootstrap": "^4.6.0",
-    "grpc": "^1.24.4",
+    "grpc": "^1.24.5",
     "grpc-tools": "^1.10.0",
     "grpc-web": "^1.2.1",
     "grpc_tools_node_protoc_ts": "^5.1.0",
@@ -26,13 +31,13 @@
     "react-bootstrap": "^1.4.3",
     "react-bootstrap-icons": "^1.2.3",
     "react-dom": "^16.13.1",
-    "react-select": "^4.0.2"
+    "react-select": "^4.1.0"
   },
   "devDependencies": {
     "@testing-library/react": "^10.0.1",
     "@types/jest": "^25.1.4",
-    "@types/node": "^13.9.5",
-    "@types/react": "^16.9.27",
+    "@types/node": "^13.13.41",
+    "@types/react": "^16.14.4",
     "@typescript-eslint/eslint-plugin": "^2.25.0",
     "@typescript-eslint/parser": "^2.34.0",
     "babel-jest": "^25.2.3",
@@ -46,6 +51,6 @@
     "jest": "^25.2.3",
     "jest-watch-typeahead": "^0.5.0",
     "prettier": "^2.0.2",
-    "typescript": "^3.8.3"
+    "typescript": "^3.9.9"
   }
 }
