@@ -2,6 +2,7 @@ version: 2.1
 
 orbs:
   node: circleci/node@4.1.0
+  heroku: circleci/heroku@1.2.5
 #  slack: circleci/slack@3.4.2
 
 jobs:
@@ -9,12 +10,22 @@ jobs:
     docker:
       - image: 'cimg/base:stable'
     steps:
+      # Build
       - checkout
       - node/install:
-          install-yarn: true
           node-version: 14
       - run: npm run format
       - run: npm run test
+      - run: npm run build
+
+      # Deploy to Heroku
+      - heroku/install
+      - run:
+        command: >
+            echo "The command above installs Heroku, the command below deploys.
+            What you do inbetween is up to you!"
+      - heroku/deploy-via-git:
+
 #      # Send status to slack.
 #      - slack/status:
 #          success_message: "Test is OK.🤗"
