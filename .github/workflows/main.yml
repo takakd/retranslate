@@ -42,4 +42,4 @@ jobs:
         uses: EndBug/add-and-commit@v7
         with:
           branch: work-commit
-          add: 'out/*'
+          add: 'out'
