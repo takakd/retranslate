@@ -58,16 +58,16 @@ $ npm install
 
 ### npm commands
 
-| Command    | details                          |
-| ---------- | -------------------------------- |
-| dev        | Run on development mode          |
-| build      | Build app for production         |
-| start      | Run on production mode           |
-| type-check | Check type by tsc                |
-| format     | Format codes                     |
-| lint       | Lint codes                       |
-| test       | Run lint, type check and tests   |
-| test-snap  | Update snapshot in jest          |
+| Command    | details                        |
+| ---------- | ------------------------------ |
+| dev        | Run on development mode        |
+| build      | Build app for production       |
+| start      | Run on production mode         |
+| type-check | Check type by tsc              |
+| format     | Format codes                   |
+| lint       | Lint codes                     |
+| test       | Run lint, type check and tests |
+| test-snap  | Update snapshot in jest        |
 
 ### Structure
 

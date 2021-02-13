@@ -170,6 +170,7 @@ export const TextBox = (props: TextBoxProps) => {
           width: 100%;
           resize: none;
           padding: 0.5rem 0.5rem 36px 0.5rem;
+          overflow-y: scroll;
         }
         .${classNamePrefix}-text-container,
           .${classNamePrefix}-textarea-container {
@@ -185,9 +186,11 @@ export const TextBox = (props: TextBoxProps) => {
         }
       `}</style>
       <style jsx global>{`
-        .${classNamePrefix}-close-button {
-          top: 1px;
-          right: 6px;
+        button.${classNamePrefix}-close-button {
+          top: 2px;
+          right: 18px;
+          background-color: #fff;
+          opacity: 0.8;
         }
         .${classNamePrefix}-clipboard-button {
           cursor: pointer;

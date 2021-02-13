@@ -3,20 +3,20 @@
 exports[`TextBox matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="jsx-128387205 jsx-2279296546 d-flex flex-row align-items-center w-100 text-box"
+    class="jsx-38414541 jsx-475603417 d-flex flex-row align-items-center w-100 text-box"
   >
     <div
-      class="jsx-128387205 jsx-2279296546 icon"
+      class="jsx-38414541 jsx-475603417 icon"
     >
       <div
         class="spinner-border spinner-border-sm"
       />
     </div>
     <div
-      class="jsx-128387205 jsx-2279296546 d-flex flex-column text-box-text-container"
+      class="jsx-38414541 jsx-475603417 d-flex flex-column text-box-text-container"
     >
       <div
-        class="jsx-128387205 jsx-2279296546 text-box-header"
+        class="jsx-38414541 jsx-475603417 text-box-header"
       >
         <img
           alt="google"
@@ -26,10 +26,10 @@ exports[`TextBox matches snapshot 1`] = `
         />
       </div>
       <div
-        class="jsx-128387205 jsx-2279296546 position-relative w-100 text-box-textarea-container"
+        class="jsx-38414541 jsx-475603417 position-relative w-100 text-box-textarea-container"
       >
         <textarea
-          class="jsx-128387205 jsx-2279296546 h-100 text-box-textarea"
+          class="jsx-38414541 jsx-475603417 h-100 text-box-textarea"
           placeholder="placeholder"
         >
           test

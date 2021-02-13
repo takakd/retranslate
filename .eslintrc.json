@@ -64,10 +64,5 @@
       "version": "detect"
     }
   },
-  "ignorePatterns": [
-    "**/node_modules/*",
-    "**/out/*",
-    "**/.next/*",
-    "**/grpc/*"
-  ]
+  "ignorePatterns": ["**/node_modules/*", "**/out/*", "**/.next/*", "**/grpc/*"]
 }
