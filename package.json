@@ -10,6 +10,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
+    "start": "next start",
     "type-check": "tsc --pretty --noEmit",
     "format": "prettier --write . && eslint . --ext js,jsx,ts,tsx --fix --max-warnings=0",
     "lint": "eslint . --ext js,jsx,ts,tsx --max-warnings=0",
