@@ -13,7 +13,7 @@ jobs:
       # Build
       - checkout
       - node/install:
-          node-version: 14
+          node-version: "14"
       - run: npm run format
       - run: npm run test
       - run: npm run build
@@ -31,7 +31,7 @@ jobs:
           command: >
             echo "The command above installs Heroku, the command below deploys.
             What you do inbetween is up to you!"
-      - heroku/deploy-via-git:
+      - heroku/deploy-via-git
 workflows:
   test:
     jobs:
