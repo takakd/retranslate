@@ -11,8 +11,8 @@ jobs:
     steps:
       - checkout
       - node/install:
-          node-version: "14.15.x"
-          npm-version: "6.14.x"
+          node-version: "14.15.3"
+          npm-version: "6.14.9"
       - run:
           command: >
             npm run format
