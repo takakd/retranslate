@@ -11,6 +11,7 @@ jobs:
     steps:
       - checkout
       - node/install:
+          install-npm: true
           node-version: "14.15.3"
       - run:
           command: >
