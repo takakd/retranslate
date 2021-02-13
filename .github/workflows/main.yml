@@ -1,0 +1,38 @@
+name: Build
+
+on:
+  push:
+    branches: [ heroku ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      GRPC_ADDR: ${{ secrets.GRPC_ADDR }}
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Build
+      - name: Use Node.js 14.15.3, Npm 6.14.9
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - run: npm install
+      - run: npm run format
+      - run: npm run test
+      - run: npm run build
+
+      # Commit to deploy to heroku.
+      - name: Commit
+        uses: EndBug/add-and-commit@v7
+        with:
+          # heroku synced heroku-deploy branch.
+          branch: heroku-deploy
+          # Add force because out is ignored.
+          add: 'out --force'
