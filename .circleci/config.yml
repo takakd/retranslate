@@ -32,8 +32,8 @@ jobs:
           command: >
             echo "The command above installs Heroku, the command below deploys.
             What you do inbetween is up to you!"
-            ls -la ./out
-            ls -la
+      - run: ls -la ./out
+      - run: ls -la
       - heroku/deploy-via-git
 workflows:
   test:
