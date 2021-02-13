@@ -4,7 +4,8 @@
   "license": "MIT",
   "version": "1.0.0",
   "engines": {
-    "node": "14.15.3"
+    "node": "14.15.3",
+    "npm": "6.14.9"
   },
   "scripts": {
     "dev": "next dev",
@@ -13,7 +14,7 @@
     "type-check": "tsc --pretty --noEmit",
     "format": "prettier --write . && eslint . --ext js,jsx,ts,tsx --fix --max-warnings=0",
     "lint": "eslint . --ext js,jsx,ts,tsx --max-warnings=0",
-    "test": "yarn lint && yarn type-check && jest",
+    "test": "npm lint && npm type-check && jest",
     "test-snap": "jest --updateSnapshot",
     "heroku-postbuild": "next build && next export"
   },
