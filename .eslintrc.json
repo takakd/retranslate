@@ -63,5 +63,11 @@
     "react": {
       "version": "detect"
     }
-  }
+  },
+  "ignorePatterns": [
+    "**/node_modules/*",
+    "**/out/*",
+    "**/.next/*",
+    "**/grpc/*"
+  ]
 }
