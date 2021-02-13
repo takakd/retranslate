@@ -10,9 +10,11 @@ jobs:
     executor: node/default
     steps:
       - checkout
-      - node/install:
-          install-npm: true
-          node-version: "14.15.3"
+      - node/install-npm:
+          version: "6.14.9"
+#      - node/install:
+#          node-version: "14.15.3"
+      - node/install-packages          
       - run:
           command: >
             npm run format
