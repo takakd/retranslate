@@ -9,7 +9,7 @@ import { LangSelect } from '../components/lang-select'
 import { Service, TextBox } from '../components/text-box'
 import { LangType } from '../grpc/translator_pb'
 
-export default ({ apiUrl }) => {
+export default ({ apiUrl }: { apiUrl: string }) => {
   // Alert message
   const [alert, setAlert] = useState<string>('')
 
@@ -83,7 +83,7 @@ export default ({ apiUrl }) => {
       setAwsFromGoogleLoading(true)
       setGoogleFromGoogleLoading(true)
 
-      const showError = (error) => {
+      const showError = (error: Error) => {
         setAlert(`failed: ${error.message}`)
         // Hide all loadings.
         setAwsLoading(false)

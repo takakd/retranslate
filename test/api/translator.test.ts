@@ -1,5 +1,5 @@
-import {Translator} from '../../api/translator'
-import {LangType} from '../../grpc/translator_pb'
+import { Translator } from '../../api/translator'
+import { LangType } from '../../grpc/translator_pb'
 
 const mockTranslateRequest = {
   setSrclang: jest.fn().mockReturnThis(),
