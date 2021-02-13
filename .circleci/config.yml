@@ -15,11 +15,9 @@ jobs:
 #      - node/install:
 #          node-version: "14.15.3"
       - node/install-packages          
-      - run:
-          command: >
-            npm run format
-            npm run test
-            npm run build
+      - run: npm run format
+      - run: npm run test
+      - run: npm run build
 #      # Send status to slack.
 #      - slack/status:
 #          success_message: "Test is OK.🤗"
