@@ -23,7 +23,7 @@ jobs:
       # Build
       - name: Use Node.js 14.15.3, Npm 6.14.9
         uses: actions/setup-node@v2
-        withignored:
+        with:
           node-version: '14'
       - run: npm install
       - run: npm run format
