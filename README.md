@@ -25,7 +25,7 @@
 
 ## Usage
 
-[Demo](https://retranslateapp.herokuapp.com/)
+[Demo](https://retranslate-demo.herokuapp.com/)
 
 <p align="center"><img src="docs/usage.gif"/></p>
 
@@ -52,7 +52,7 @@ We tested in the above environment.
 #### Install npm modules
 
 ```sh
-$ yarn install
+$ npm install
 ```
 
 ### npm commands
