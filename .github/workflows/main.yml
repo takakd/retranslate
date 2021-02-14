@@ -34,5 +34,7 @@ jobs:
         with:
           # heroku synced heroku-deploy branch.
           branch: heroku-deploy
+          # On way to use heroku-deploy branch.
+          push: origin heroku-deploy --force
           # Add force because out is ignored.
           add: 'out --force'
