@@ -45,7 +45,6 @@ Select a source language and enter text, and they will be translated after a whi
 
 - macOS 10.15.5
 - [Node.js](https://nodejs.org/en/) v14.15.3, npm 6.14.9
-- [Yarn](https://yarnpkg.com/) v1.22.10
 
 We tested in the above environment.
 
@@ -71,7 +70,7 @@ $ npm install
 ### Structure
 
 - Application is constructed on Next.js.
-- Call [Translation gRPC API]().
+- Call [Translation gRPC API](https://github.com/takakd/translation-api).
 
 #### Sources
 
@@ -118,4 +117,4 @@ Issues and reviews are welcome. Don't hesitate to create issues and PR.
 
 ## License
 
-- Copyright 2020 © takakd.
+- Copyright 2021 © takakd.
