@@ -25,6 +25,8 @@
 
 ## Usage
 
+[Demo](https://retranslateapp.herokuapp.com/)
+
 <p align="center"><img src="docs/usage.gif"/></p>
 
 Select a source language and enter text, and they will be translated after a while.
