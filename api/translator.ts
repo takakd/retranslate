@@ -69,9 +69,11 @@ export class Translator {
 
     // Call
     const translatorService = new TranslatorClient(this.apiUrl)
-    const resp = await translatorService.translate(req, {
-      deadline: this.grpcDeadline(new Date()),
-    }).catch(error => error)
+    const resp = await translatorService
+      .translate(req, {
+        deadline: this.grpcDeadline(new Date()),
+      })
+      .catch((error) => error)
     if (resp.code && resp.code !== 0) {
       throw new Error(resp.message)
     }

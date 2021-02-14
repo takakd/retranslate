@@ -14,7 +14,7 @@
     "type-check": "tsc --pretty --noEmit",
     "format": "prettier --write . && eslint . --ext js,jsx,ts,tsx --fix --max-warnings=0",
     "lint": "eslint . --ext js,jsx,ts,tsx --max-warnings=0",
-    "test": "npm run lint && npm run type-check && jest",
+    "test": "npm run lint && npm run type-check && npm run test-snap && jest",
     "test-snap": "jest --updateSnapshot",
     "heroku-postbuild": "next build && next export"
   },

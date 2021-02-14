@@ -1,6 +1,5 @@
 {
   "root": "out/",
   "canonical_host": "${HOST}",
-  "https_only": true,
-  "basic_auth": true
+  "https_only": true
 }
