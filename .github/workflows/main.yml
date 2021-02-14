@@ -32,7 +32,7 @@ jobs:
       - name: Commit
         uses: EndBug/add-and-commit@v7
         with:
-          # heroku synced heroku-deploy branch.
-          branch: heroku-deploy
+          # On way to use heroku-deploy branch.
+          push: origin ${{ github.ref }}:heroku-deploy --force
           # Add force because out is ignored.
           add: 'out --force'
