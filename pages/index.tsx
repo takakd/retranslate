@@ -5,6 +5,7 @@ import { Alert } from 'react-bootstrap'
 
 import { Translator, TranslatorOutput } from '../api/translator'
 import { GitHubCorner } from '../components/github-corner'
+import { GoogleAnalytics } from '../components/google-analytics'
 import { LangSelect } from '../components/lang-select'
 import { Service, TextBox } from '../components/text-box'
 import { LangType } from '../grpc/translator_pb'
@@ -176,6 +177,7 @@ export default ({ apiUrl }: { apiUrl: string }) => {
       <Head>
         <title>Retranslate</title>
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+        <GoogleAnalytics />
       </Head>
 
       <header className="navbar navbar-dark bg-info fixed-top header py-0">
