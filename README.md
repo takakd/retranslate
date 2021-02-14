@@ -9,6 +9,10 @@
     <img src="https://github.com/takakd/retranslate/workflows/Deploy/badge.svg"/>
 </p>
 
+<p align="center">
+    <a href="https://retranslate-demo.herokuapp.com/">Demo</a>
+</p>
+
 <br>
 
 ## Table of Contents
@@ -24,8 +28,6 @@
 - Translate translated text again.
 
 ## Usage
-
-[Demo](https://retranslate-demo.herokuapp.com/)
 
 <p align="center"><img src="docs/usage.gif"/></p>
 
