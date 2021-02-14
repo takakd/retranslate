@@ -56,9 +56,9 @@ $ yarn install
 
 | Command    | details                          |
 | ---------- | -------------------------------- |
-| dev        | Run on local in development mode |
+| dev        | Run on development mode          |
 | build      | Build app for production         |
-| start      | Run production server            |
+| start      | Run on production mode           |
 | type-check | Check type by tsc                |
 | format     | Format codes                     |
 | lint       | Lint codes                       |

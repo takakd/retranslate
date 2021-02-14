@@ -71,21 +71,31 @@ export class Translator {
     const translatorService = new TranslatorClient(this.apiUrl)
     const resp = await translatorService.translate(req, {
       deadline: this.grpcDeadline(new Date()),
-    })
+    }).catch(error => error)
+    if (resp.code && resp.code !== 0) {
+      throw new Error(resp.message)
+    }
 
     const translatedList = resp.getTranslatedtextlistMap()
 
-    const output = {
+    const output: TranslatorOutput = {
       aws: '',
       google: '',
     }
-    for (const key of ['aws', 'google']) {
-      const v = translatedList.get(key)
-      if (typeof v === 'undefined') {
-        throw new Error(`error: undefined ${key}`)
-      }
-      output[key] = v.getText()
+
+    let v
+    v = translatedList.get('aws')
+    if (typeof v === 'undefined') {
+      throw new Error(`error: undefined aws`)
     }
+    output.aws = v.getText()
+
+    v = translatedList.get('google')
+    if (typeof v === 'undefined') {
+      throw new Error(`error: undefined google`)
+    }
+    output.google = v.getText()
+
     return output
   }
 }
