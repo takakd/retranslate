@@ -33,6 +33,6 @@ jobs:
         uses: EndBug/add-and-commit@v7
         with:
           # On way to use heroku-deploy branch.
-          push: origin ${GITHUB_REF}:heroku-deploy --force
+          push: origin $GITHUB_REF:heroku-deploy --force
           # Add force because out is ignored.
           add: 'out --force'
