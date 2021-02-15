@@ -12,6 +12,7 @@ jobs:
           version: 6.14.9
       - node/install:
           node-version: 14.15.3
+          install-npm: false
       - run:
           command: npm install
       - run:
