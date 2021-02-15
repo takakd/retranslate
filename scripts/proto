@@ -8,12 +8,12 @@ PROTO_SRC="${PROTO_DIR}/*.proto"
 if [[ "$#" -lt 1 ]]; then
     cat <<_EOT_
 Usage:
-    protos <proto directory>
+    proto <proto directory>
 
 set a directory path included .proto files to <proto directory>
 
 e.g.
-    $ ./protos /Somewhere/proto
+    $ ./proto /Somewhere/proto
 
 _EOT_
     exit 0
