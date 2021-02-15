@@ -8,14 +8,17 @@ jobs:
       name: node/default
     steps:
       - checkout
-      - node/install-npm
+      - node/install-npm:
           version: 6.14.9
-      - node/install
-          version: 14.15.3
+      - node/install:
+          node-version: 14.15.3
       - node/install-packages
       - run:
           command: npm run test
   push:
+    docker:
+      - image: 'cimg/base:stable'    
+    steps:
       - run:
           command: echo hi
 
@@ -23,5 +26,6 @@ workflows:
   deployment:
     jobs:
       - test
-      - push
-          requires: test
+      - push:
+          requires: 
+            - test
