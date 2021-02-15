@@ -3,31 +3,38 @@ orbs:
   node: circleci/node@4.1.0
 
 jobs:
-  test:
-    executor:
-      name: node/default
-    steps:
-      - checkout
-      - node/install-npm:
-          version: 6.14.9
-      - node/install:
-          node-version: 14.15.3
-          install-npm: false
-      - run:
-          command: npm install
-      - run:
-          command: npm run test
+#  test:
+#    executor:
+#      name: node/default
+#    steps:
+#      - checkout
+#      - node/install-npm:
+#          version: 6.14.9
+#      - node/install:
+#          node-version: 14.15.3
+#          install-npm: false
+#      - run:
+#          command: npm install
+#      - run:
+#          command: npm run test
+#      - run:
+#          command: npm run build
   push:
     docker:
       - image: 'cimg/base:stable'    
     steps:
       - run:
-          command: echo hi
+          command: echo $CIRCLE_BRANCH
+      - run:
+          command: echo $CIRCLE_USERNAME
+      - run:
+          command: echo $CIRCLE_REPOSITORY_URL
 
 workflows:
   deployment:
     jobs:
-      - test
-      - push:
-          requires: 
-            - test
+      - push
+#      - test
+#      - push:
+#          requires: 
+#            - test
