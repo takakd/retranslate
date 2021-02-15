@@ -49,6 +49,15 @@ jobs:
 
       - run:
           git clone $CIRCLE_REPOSITORY_URL ./test
+      - run:
+          git checkout -b test-ci
+      - run:
+          git remote -v
+      - run:
+          git branch
+      - run:
+          git push -f origin test-ci:test-ci
+
 
 workflows:
   deployment:
