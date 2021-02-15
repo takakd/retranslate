@@ -50,8 +50,8 @@ jobs:
       - checkout
       - run:
           git branch
-      - run:
-          git clone $CIRCLE_REPOSITORY_URL ./test
+#      - run:
+#          git clone $CIRCLE_REPOSITORY_URL ./test
       - run:
           git checkout -b test-ci
       - run:
