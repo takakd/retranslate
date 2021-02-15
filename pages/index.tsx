@@ -356,7 +356,7 @@ export default ({ apiUrl }: { apiUrl: string }) => {
 export const getStaticProps = async () => {
   return {
     props: {
-      apiUrl: process.env.GRPC_ADDR,
+      apiUrl: process.env.API_ENDPOINT,
     },
   }
 }
