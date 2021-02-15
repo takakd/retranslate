@@ -11,6 +11,10 @@ Usage:
     protos <proto directory>
 
 set a directory path included .proto files to <proto directory>
+
+e.g.
+    $ ./protos /Somewhere/proto
+
 _EOT_
     exit 0
 fi
