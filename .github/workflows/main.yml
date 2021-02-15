@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      GRPC_ADDR: ${{ secrets.GRPC_ADDR }}
+      API_ENDPOINT: ${{ secrets.API_ENDPOINT }}
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
