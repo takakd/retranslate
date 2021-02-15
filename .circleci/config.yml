@@ -32,14 +32,22 @@ jobs:
       - run:
           mkdir -p ~/.ssh
 
+      - run:
           ssh-keyscan -H $CIRCLE_REPOSITORY_URL >> ~/.ssh/known_hosts
+      - run:
           echo "test" > ~/.ssh/ci.key
 
+      - run:
           chmod 700 ~/.ssh
+      - run:
           chmod 600 ~/.ssh/ci.key
+      - run:
+          ls -la ~/.ssh
 
+      - run:
           export GIT_SSH_COMMAND='ssh -i ~/.ssh/ci.key'
 
+      - run:
           git clone $CIRCLE_REPOSITORY_URL ./test
 
 workflows:
