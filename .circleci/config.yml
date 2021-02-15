@@ -47,6 +47,9 @@ jobs:
       - run:
           export GIT_SSH_COMMAND='ssh -i ~/.ssh/ci.key'
 
+      - checkout
+      - run:
+          git branch
       - run:
           git clone $CIRCLE_REPOSITORY_URL ./test
       - run:
