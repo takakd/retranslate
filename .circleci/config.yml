@@ -29,6 +29,18 @@ jobs:
           command: echo $CIRCLE_USERNAME
       - run:
           command: echo $CIRCLE_REPOSITORY_URL
+      - run:
+          mkdir -p ~/.ssh
+
+          ssh-keyscan -H $CIRCLE_REPOSITORY_URL >> ~/.ssh/known_hosts
+          echo "test" > ~/.ssh/ci.key
+
+          chmod 700 ~/.ssh
+          chmod 600 ~/.ssh/ci.key
+
+          export GIT_SSH_COMMAND='ssh -i ~/.ssh/ci.key'
+
+          git clone $CIRCLE_REPOSITORY_URL ./test
 
 workflows:
   deployment:
