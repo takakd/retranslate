@@ -8,40 +8,29 @@ jobs:
       name: node/default
     steps:
       - checkout
-      
-#      - node/install-npm:
-#          version: 6.14.9
-#          
-#      - node/install:
-#          node-version: 14.15.3
-#          install-npm: false
-#          
-#      - run:
-#          command: npm install
-#          
-#      - run:
-#          command: npm run test
-#          
-#      - run:
-#          command: npm run build
 
       - run:
-          git checkout -b heroku-deploy
+          command: git checkout -b heroku-deploy
+
+      - node/install-npm:
+          version: 6.14.9
+
+      - node/install:
+          node-version: 14.15.3
+          install-npm: false
 
       - run:
-          command: |
-            mkdir -p ./out
-            echo "test" > ./out/test
-          
-      - run:
-          git add -f ./out
+          command: npm install
 
       - run:
-          command: |
-            ls -la .
-            ls -la ./out
-            git status          
-            git remote -v
+          command: npm run test
+
+      - run:
+          command: npm run build
+
+      - run:
+          command: git add -f ./out
+
       - run:
           command: |
             git config --global user.email "circleci@example.com"
