@@ -35,12 +35,12 @@ jobs:
       - run: npm run build
 
       - name: Setup git user email and name
-        run : |
+        run: |
           git config --global user.email "githubactions@example.com"
           git config --global user.name "GitHub Actions"
 
       - run: git checkout -b $DEPLOY_BRANCH
-        
+
       - name: Add built assest
         run: git add -f ./out
 

@@ -180,8 +180,9 @@ export default ({ apiUrl }: { apiUrl: string }) => {
         <GoogleAnalytics />
       </Head>
 
-      <header className="navbar navbar-dark bg-info fixed-top header py-0">
-        <span className="navbar-brand">Retranslate</span>
+      <header className="navbar navbar-dark bg-info fixed-top header py-0 justify-content-start">
+        <img className="navbar-logo" src="/logo.svg" alt="Retranslate" />
+        <span className="navbar-brand ml-3">Retranslate</span>
         <GitHubCorner
           width="60px"
           color="#17a2b8"
@@ -286,7 +287,7 @@ export default ({ apiUrl }: { apiUrl: string }) => {
 
       <footer className="footer mt-4 mb-0 mx-0">
         <div className="container m-0">
-          <p className="text-muted small">Retranslate is © takakd</p>
+          <p className="text-muted small">&copy; 2021 takakd</p>
         </div>
       </footer>
 
@@ -297,6 +298,10 @@ export default ({ apiUrl }: { apiUrl: string }) => {
 
         .header {
           min-height: 60px;
+        }
+
+        .navbar-logo {
+          height: 1.3rem;
         }
 
         .main-container {
