@@ -24,25 +24,20 @@ jobs:
           
       - run:
           command: npm run build
-          
-  push to GitHub:
-    docker:
-      - image: 'cimg/base:stable'
-    steps:
+
       - run:
-          git checkout heroku-deploy 
+          git checkout -b heroku-deploy 
+
       - run:
           git add ./out
+
       - run:
           git commit -m "commit by CircleCI"
+
       - run:
           git push -f origin heroku-deploy:heroku-deploy
-
 
 workflows:
   deployment:
     jobs:
-      - build and test
-      - push to GitHub:
-          requires:
-            - build and test
+      - build, test, and push
