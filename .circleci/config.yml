@@ -3,7 +3,7 @@ orbs:
   node: circleci/node@4.1.0
 
 jobs:
-  build and test:
+  build test and push:
     executor:
       name: node/default
     steps:
@@ -26,7 +26,7 @@ jobs:
           command: npm run build
 
       - run:
-          git checkout -b heroku-deploy 
+          git checkout -b heroku-deploy
 
       - run:
           git add ./out
@@ -37,7 +37,8 @@ jobs:
       - run:
           git push -f origin heroku-deploy:heroku-deploy
 
+
 workflows:
   deployment:
     jobs:
-      - build, test, and push
+      - build test and push
