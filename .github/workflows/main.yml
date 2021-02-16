@@ -28,7 +28,7 @@ jobs:
       - run: npm run test
       - run: npm run build
 
-      - run:
+      - run: |
           git config --global user.email "githubactions@example.com"
           git config --global user.name "GitHub Actions"
       - run: git status
