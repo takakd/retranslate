@@ -1,15 +1,16 @@
-name: Deploy
+name: Test and Deploy
 
 on:
   push:
-    branches: [master]
+    # Targets are all branches.
+    # Run deployment if a branch is master.
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
     # There are no inputs.
 
 jobs:
-  build_and_push:
+  test_build_and_push:
     runs-on: ubuntu-latest
 
     env:
@@ -31,20 +32,29 @@ jobs:
 
       - run: npm run test
 
+
+      # Run the below actions if the ref is equal to master.
+
       # Output build assets to ./out
       - run: npm run build
+        if: ${{ github.ref == 'refs/heads/master' }}
 
       - name: Setup git user email and name
+        if: ${{ github.ref == 'refs/heads/master' }}
         run: |
           git config --global user.email "githubactions@example.com"
           git config --global user.name "GitHub Actions"
 
       - run: git checkout -b $DEPLOY_BRANCH
+        if: ${{ github.ref == 'refs/heads/master' }}
 
       - name: Add built assest
+        if: ${{ github.ref == 'refs/heads/master' }}
         run: git add -f ./out
 
       - run: git commit --allow-empty -m "commit by GitHub Actions"
+        if: ${{ github.ref == 'refs/heads/master' }}
 
       - name: Push to a deployment branch
+        if: ${{ github.ref == 'refs/heads/master' }}
         run: git push -f origin $DEPLOY_BRANCH:$DEPLOY_BRANCH
