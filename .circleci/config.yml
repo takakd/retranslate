@@ -29,23 +29,23 @@ jobs:
           command: echo $CIRCLE_USERNAME
       - run:
           command: echo $CIRCLE_REPOSITORY_URL
-      - run:
-          mkdir -p ~/.ssh
+      #- run:
+      #    mkdir -p ~/.ssh
 
-      - run:
-          ssh-keyscan -H github.com >> ~/.ssh/known_hosts
-      - run:
-          echo "test" > ~/.ssh/ci.key
-
-      - run:
-          chmod 700 ~/.ssh
-      - run:
-          chmod 600 ~/.ssh/ci.key
-      - run:
-          ls -la ~/.ssh
-
-      - run:
-          export GIT_SSH_COMMAND='ssh -i ~/.ssh/ci.key'
+#      - run:
+#          ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+#      - run:
+#          echo "test" > ~/.ssh/ci.key
+#
+#      - run:
+#          chmod 700 ~/.ssh
+#      - run:
+#          chmod 600 ~/.ssh/ci.key
+#      - run:
+#          ls -la ~/.ssh
+#
+#      - run:
+#          export GIT_SSH_COMMAND='ssh -i ~/.ssh/ci.key'
 
       - checkout
       - run:
