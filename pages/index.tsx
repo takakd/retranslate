@@ -10,7 +10,7 @@ import { LangSelect } from '../components/lang-select'
 import { Service, TextBox } from '../components/text-box'
 import { LangType } from '../grpc/translator_pb'
 
-export default ({ apiUrl }: { apiUrl: string }) => {
+const Index = ({ apiUrl }: { apiUrl: string }) => {
   // Alert message
   const [alert, setAlert] = useState<string>('')
 
@@ -365,3 +365,5 @@ export const getStaticProps = async () => {
     },
   }
 }
+
+export default Index
