@@ -9,34 +9,37 @@ jobs:
     steps:
       - checkout
       
-      - node/install-npm:
-          version: 6.14.9
-          
-      - node/install:
-          node-version: 14.15.3
-          install-npm: false
-          
-      - run:
-          command: npm install
-          
-      - run:
-          command: npm run test
-          
-      - run:
-          command: npm run build
+#      - node/install-npm:
+#          version: 6.14.9
+#          
+#      - node/install:
+#          node-version: 14.15.3
+#          install-npm: false
+#          
+#      - run:
+#          command: npm install
+#          
+#      - run:
+#          command: npm run test
+#          
+#      - run:
+#          command: npm run build
 
+      - run:
+          mkdir out
+          touch out/test
+          
       - run:
           git checkout -b heroku-deploy
 
       - run:
-          git add ./out
+          git add -f ./out
 
       - run:
           git commit -m "commit by CircleCI"
 
       - run:
           git push -f origin heroku-deploy:heroku-deploy
-
 
 workflows:
   deployment:
