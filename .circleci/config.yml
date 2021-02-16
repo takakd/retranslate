@@ -31,14 +31,15 @@ jobs:
       - run:
           mkdir out
           touch out/test
-
+          
       - run:
           git add -f ./out/test
 
       - run:
-          git config --global user.email "circleci@example.com"
-          git config --global user.name "circle ci"
-          git commit -m "commit by CircleCI"
+          command: |
+            git config --global user.email "circleci@example.com"
+            git config --global user.name "circle ci"
+            git commit -m "commit by CircleCI"
 
       - run:
           git push -f origin heroku-deploy:heroku-deploy
