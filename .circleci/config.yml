@@ -29,8 +29,9 @@ jobs:
           git checkout -b heroku-deploy
 
       - run:
-          mkdir ./out
-          echo "test" > ./out/test
+          command: |
+            mkdir -p ./out
+            echo "test" > ./out/test
           
       - run:
           git add -f ./out
