@@ -58,20 +58,20 @@ $ npm install
 
 #### Set environment variables
 
-Set environment variables. For details, to see  [.env.example](.env.example).
+Set environment variables. For details, to see [.env.example](.env.example).
 
 ### npm commands
 
-Command    | details                       
----------- | ------------------------------
-dev        | Run on development mode       
-build      | Build app for production      
-start      | Run on production mode        
-type-check | `tsc` checks .ts types          
-format     | Format codes                  
-lint       | Lint codes                    
-test       | Run lint, type-check, test-snap, and tests
-test-snap  | Update jest snapshots
+| Command    | details                                    |
+| ---------- | ------------------------------------------ |
+| dev        | Run on development mode                    |
+| build      | Build app for production                   |
+| start      | Run on production mode                     |
+| type-check | `tsc` checks .ts types                     |
+| format     | Format codes                               |
+| lint       | Lint codes                                 |
+| test       | Run lint, type-check, test-snap, and tests |
+| test-snap  | Update jest snapshots                      |
 
 ### Structure
 
@@ -110,7 +110,7 @@ test-snap  | Update jest snapshots
 |-- scripts
 |   `-- proto      <-- Script to generate gRPC classes with .proto
 |
-|-- static.json     <-- heroku-buildpack-static config to deploy to Heroku 
+|-- static.json     <-- heroku-buildpack-static config to deploy to Heroku
 |
 `-- test        <-- jest tests files
 ```
@@ -135,4 +135,4 @@ Issues and reviews are welcome. Don't hesitate to create issues and PR.
 
 ## License
 
-- Copyright 2021 © takakd.
+&copy; 2021 takakd
