@@ -2,13 +2,14 @@ name: Deploy
 
 on:
   push:
-    branches: [master, refactor]
+    branches: [master]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    # There are no inputs.
 
 jobs:
-  build_and_deploy:
+  build_and_push:
     runs-on: ubuntu-latest
 
     env:
@@ -45,4 +46,5 @@ jobs:
 
       - run: git commit --allow-empty -m "commit by GitHub Actions"
 
-      - run: git push -f origin $DEPLOY_BRANCH:$DEPLOY_BRANCH
+      - name: Push to a deployment branch
+        run: git push -f origin $DEPLOY_BRANCH:$DEPLOY_BRANCH
