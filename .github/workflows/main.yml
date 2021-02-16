@@ -20,7 +20,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Build
       - name: Use Node.js 14.15.3, Npm 6.14.9
         uses: actions/setup-node@v2
         with:
@@ -32,6 +31,7 @@ jobs:
 
       - run: npm run test
 
+      # Output build assets to ./out
       - run: npm run build
 
       - name: Setup git user email and name
@@ -40,7 +40,7 @@ jobs:
           git config --global user.name "GitHub Actions"
 
       - run: git checkout -b $DEPLOY_BRANCH
-
+        
       - name: Add built assest
         run: git add -f ./out
 
