@@ -3,70 +3,46 @@ orbs:
   node: circleci/node@4.1.0
 
 jobs:
-#  test:
-#    executor:
-#      name: node/default
-#    steps:
-#      - checkout
-#      - node/install-npm:
-#          version: 6.14.9
-#      - node/install:
-#          node-version: 14.15.3
-#          install-npm: false
-#      - run:
-#          command: npm install
-#      - run:
-#          command: npm run test
-#      - run:
-#          command: npm run build
-  push:
+  build and test:
+    executor:
+      name: node/default
+    steps:
+      - checkout
+      
+      - node/install-npm:
+          version: 6.14.9
+          
+      - node/install:
+          node-version: 14.15.3
+          install-npm: false
+          
+      - run:
+          command: npm install
+          
+      - run:
+          command: npm run test
+          
+      - run:
+          command: npm run build
+          
+  push to GitHub:
     docker:
-      - image: 'cimg/base:stable'    
+      - image: 'cimg/base:stable'
     steps:
       - run:
-          command: echo $CIRCLE_BRANCH
+          git checkout heroku-deploy 
       - run:
-          command: echo $CIRCLE_USERNAME
+          git add ./out
       - run:
-          command: echo $CIRCLE_REPOSITORY_URL
-      #- run:
-      #    mkdir -p ~/.ssh
-
-#      - run:
-#          ssh-keyscan -H github.com >> ~/.ssh/known_hosts
-#      - run:
-#          echo "test" > ~/.ssh/ci.key
-#
-#      - run:
-#          chmod 700 ~/.ssh
-#      - run:
-#          chmod 600 ~/.ssh/ci.key
-#      - run:
-#          ls -la ~/.ssh
-#
-#      - run:
-#          export GIT_SSH_COMMAND='ssh -i ~/.ssh/ci.key'
-
-      - checkout
+          git commit -m "commit by CircleCI"
       - run:
-          git branch
-#      - run:
-#          git clone $CIRCLE_REPOSITORY_URL ./test
-      - run:
-          git checkout -b test-ci
-      - run:
-          git remote -v
-      - run:
-          git branch
-      - run:
-          git push -f origin test-ci:test-ci
+          git push -f origin heroku-deploy:heroku-deploy
 
 
 workflows:
   deployment:
     jobs:
-      - push
-#      - test
-#      - push:
-#          requires: 
-#            - test
+      - build and test
+      - push to GitHub:
+          requires:
+            - build and test
