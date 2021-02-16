@@ -7,38 +7,40 @@ jobs:
     executor:
       name: node/default
     steps:
-      - checkout
-
       - run:
-          command: git checkout -b heroku-deploy
+          command: echo hi
+      # - checkout
 
-      - node/install-npm:
-          version: 6.14.9
+      # - run:
+      #     command: git checkout -b heroku-deploy
 
-      - node/install:
-          node-version: 14.15.3
-          install-npm: false
+      # - node/install-npm:
+      #     version: 6.14.9
 
-      - run:
-          command: npm install
+      # - node/install:
+      #     node-version: 14.15.3
+      #     install-npm: false
 
-      - run:
-          command: npm run test
+      # - run:
+      #     command: npm install
 
-      - run:
-          command: npm run build
+      # - run:
+      #     command: npm run test
 
-      - run:
-          command: git add -f ./out
+      # - run:
+      #     command: npm run build
 
-      - run:
-          command: |
-            git config --global user.email "circleci@example.com"
-            git config --global user.name "circle ci"
-            git commit --allow-empty -m "commit by CircleCI"
+      # - run:
+      #     command: git add -f ./out
 
-      - run:
-          git push -f origin heroku-deploy:heroku-deploy
+      # - run:
+      #     command: |
+      #       git config --global user.email "circleci@example.com"
+      #       git config --global user.name "circle ci"
+      #       git commit --allow-empty -m "commit by CircleCI"
+
+      # - run:
+      #     git push -f origin heroku-deploy:heroku-deploy
 
 workflows:
   deployment:
