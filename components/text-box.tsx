@@ -195,7 +195,7 @@ export const TextBox = (props: TextBoxProps) => {
         .${classNamePrefix}-clipboard-button {
           cursor: pointer;
           bottom: 10px;
-          right: 10px;
+          right: 24px;
         }
       `}</style>
     </div>
