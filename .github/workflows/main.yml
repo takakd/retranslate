@@ -6,33 +6,45 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+    # There are no inputs.
 
 jobs:
-  build:
+  build_and_push:
     runs-on: ubuntu-latest
 
     env:
-      GRPC_ADDR: ${{ secrets.GRPC_ADDR }}
+      API_ENDPOINT: ${{ secrets.API_ENDPOINT }}
+      DEPLOY_BRANCH: ${{ secrets.DEPLOY_BRANCH }}
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
-      # Build
       - name: Use Node.js 14.15.3, Npm 6.14.9
         uses: actions/setup-node@v2
         with:
-          node-version: '14'
+          node-version: '14.15.3'
+
       - run: npm install
+
       - run: npm run format
+
       - run: npm run test
+
+      # Output build assets to ./out
       - run: npm run build
 
-      # Commit to deploy to heroku.
-      - name: Commit
-        uses: EndBug/add-and-commit@v7
-        with:
-          # On way to use heroku-deploy branch.
-          push: origin ${{ github.ref }}:heroku-deploy --force
-          # Add force because out is ignored.
-          add: 'out --force'
+      - name: Setup git user email and name
+        run : |
+          git config --global user.email "githubactions@example.com"
+          git config --global user.name "GitHub Actions"
+
+      - run: git checkout -b $DEPLOY_BRANCH
+        
+      - name: Add built assest
+        run: git add -f ./out
+
+      - run: git commit --allow-empty -m "commit by GitHub Actions"
+
+      - name: Push to a deployment branch
+        run: git push -f origin $DEPLOY_BRANCH:$DEPLOY_BRANCH
