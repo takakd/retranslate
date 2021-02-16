@@ -37,6 +37,12 @@ jobs:
 
       - run:
           command: |
+            ls -la .
+            ls -la ./out
+            git status          
+            
+      - run:
+          command: |
             git config --global user.email "circleci@example.com"
             git config --global user.name "circle ci"
             git commit -m "commit by CircleCI"
