@@ -29,11 +29,11 @@ jobs:
           git checkout -b heroku-deploy
 
       - run:
-          mkdir out
-          touch out/test
+          mkdir ./out
+          echo "test" > ./out/test
           
       - run:
-          git add -f ./out/test
+          git add -f ./out
 
       - run:
           command: |
