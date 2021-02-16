@@ -36,7 +36,9 @@ jobs:
           git add -f ./out
 
       - run:
-          git commit -m "commit by CircleCI" --author "circleci<circleci@example.com>"
+          git config --global user.email "circleci@example.com"
+          git config --global user.name "circle ci"
+          git commit -m "commit by CircleCI"
 
       - run:
           git push -f origin heroku-deploy:heroku-deploy
