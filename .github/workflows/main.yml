@@ -13,7 +13,7 @@ jobs:
 
     env:
       API_ENDPOINT: ${{ secrets.API_ENDPOINT }}
-      DEPLOY_BRANCH: ${{ secrets.API_ENDPOINT }}
+      DEPLOY_BRANCH: ${{ secrets.DEPLOY_BRANCH }}
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
