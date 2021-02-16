@@ -40,12 +40,12 @@ jobs:
             ls -la .
             ls -la ./out
             git status          
-            
+            git remote -v
       - run:
           command: |
             git config --global user.email "circleci@example.com"
             git config --global user.name "circle ci"
-            git commit -m "commit by CircleCI"
+            git commit --allow-empty -m "commit by CircleCI"
 
       - run:
           git push -f origin heroku-deploy:heroku-deploy
