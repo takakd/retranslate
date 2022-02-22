@@ -127,7 +127,6 @@ $ ./scripts/proto /Somewhere/api/protos
 ## Get in touch
 
 - [Dev.to](https://dev.to/takakd)
-- [Twitter](https://twitter.com/takakdkd)
 
 ## Contributing
 
