@@ -133,19 +133,19 @@ exports[`Index matches snapshot 1`] = `
             class="jsx-146871871 col text-col"
           >
             <div
-              class="jsx-511675277 jsx-3334098617 d-flex flex-row align-items-center w-100 text-input"
+              class="jsx-511675277 jsx-2841667737 d-flex flex-row align-items-center w-100 text-input"
             >
               <div
-                class="jsx-511675277 jsx-3334098617 d-flex flex-column text-input-text-container"
+                class="jsx-511675277 jsx-2841667737 d-flex flex-column text-input-text-container"
               >
                 <div
-                  class="jsx-511675277 jsx-3334098617 text-input-header"
+                  class="jsx-511675277 jsx-2841667737 text-input-header"
                 />
                 <div
-                  class="jsx-511675277 jsx-3334098617 position-relative w-100 text-input-textarea-container"
+                  class="jsx-511675277 jsx-2841667737 position-relative w-100 text-input-textarea-container"
                 >
                   <textarea
-                    class="jsx-511675277 jsx-3334098617 h-100 text-input-textarea"
+                    class="jsx-511675277 jsx-2841667737 h-100 text-input-textarea"
                     placeholder="Type to translate"
                   />
                 </div>
@@ -156,10 +156,10 @@ exports[`Index matches snapshot 1`] = `
             class="jsx-146871871 col text-col"
           >
             <div
-              class="jsx-1918438050 jsx-3945953209 d-flex flex-row align-items-center w-100 text-box"
+              class="jsx-1918438050 jsx-3453522329 d-flex flex-row align-items-center w-100 text-box"
             >
               <div
-                class="jsx-1918438050 jsx-3945953209 icon"
+                class="jsx-1918438050 jsx-3453522329 icon"
               >
                 <svg
                   fill="currentColor"
@@ -175,10 +175,10 @@ exports[`Index matches snapshot 1`] = `
                 </svg>
               </div>
               <div
-                class="jsx-1918438050 jsx-3945953209 d-flex flex-column text-trans-text-container"
+                class="jsx-1918438050 jsx-3453522329 d-flex flex-column text-trans-text-container"
               >
                 <div
-                  class="jsx-1918438050 jsx-3945953209 text-box-header"
+                  class="jsx-1918438050 jsx-3453522329 text-box-header"
                 >
                   <img
                     alt="aws"
@@ -188,19 +188,19 @@ exports[`Index matches snapshot 1`] = `
                   />
                 </div>
                 <div
-                  class="jsx-1918438050 jsx-3945953209 position-relative w-100 text-trans-textarea-container"
+                  class="jsx-1918438050 jsx-3453522329 position-relative w-100 text-trans-textarea-container"
                 >
                   <textarea
-                    class="jsx-1918438050 jsx-3945953209 h-100 text-trans-textarea"
+                    class="jsx-1918438050 jsx-3453522329 h-100 text-trans-textarea"
                   />
                 </div>
               </div>
             </div>
             <div
-              class="jsx-723032816 jsx-3945953209 d-flex flex-row align-items-center w-100 text-trans-second"
+              class="jsx-723032816 jsx-3453522329 d-flex flex-row align-items-center w-100 text-trans-second"
             >
               <div
-                class="jsx-723032816 jsx-3945953209 icon"
+                class="jsx-723032816 jsx-3453522329 icon"
               >
                 <svg
                   fill="currentColor"
@@ -216,10 +216,10 @@ exports[`Index matches snapshot 1`] = `
                 </svg>
               </div>
               <div
-                class="jsx-723032816 jsx-3945953209 d-flex flex-column text-trans-text-container"
+                class="jsx-723032816 jsx-3453522329 d-flex flex-column text-trans-text-container"
               >
                 <div
-                  class="jsx-723032816 jsx-3945953209 text-trans-second-header"
+                  class="jsx-723032816 jsx-3453522329 text-trans-second-header"
                 >
                   <img
                     alt="google"
@@ -229,10 +229,10 @@ exports[`Index matches snapshot 1`] = `
                   />
                 </div>
                 <div
-                  class="jsx-723032816 jsx-3945953209 position-relative w-100 text-trans-textarea-container"
+                  class="jsx-723032816 jsx-3453522329 position-relative w-100 text-trans-textarea-container"
                 >
                   <textarea
-                    class="jsx-723032816 jsx-3945953209 h-100 text-trans-textarea"
+                    class="jsx-723032816 jsx-3453522329 h-100 text-trans-textarea"
                   />
                 </div>
               </div>
@@ -242,10 +242,10 @@ exports[`Index matches snapshot 1`] = `
             class="jsx-146871871 col text-col"
           >
             <div
-              class="jsx-665952021 jsx-2475499737 d-flex flex-row align-items-center w-100 text-box"
+              class="jsx-665952021 jsx-3068828345 d-flex flex-row align-items-center w-100 text-box"
             >
               <div
-                class="jsx-665952021 jsx-2475499737 icon"
+                class="jsx-665952021 jsx-3068828345 icon"
               >
                 <svg
                   fill="currentColor"
@@ -261,10 +261,10 @@ exports[`Index matches snapshot 1`] = `
                 </svg>
               </div>
               <div
-                class="jsx-665952021 jsx-2475499737 d-flex flex-column text-retrans-text-container"
+                class="jsx-665952021 jsx-3068828345 d-flex flex-column text-retrans-text-container"
               >
                 <div
-                  class="jsx-665952021 jsx-2475499737 text-box-header"
+                  class="jsx-665952021 jsx-3068828345 text-box-header"
                 >
                   <img
                     alt="aws"
@@ -274,19 +274,19 @@ exports[`Index matches snapshot 1`] = `
                   />
                 </div>
                 <div
-                  class="jsx-665952021 jsx-2475499737 position-relative w-100 text-retrans-textarea-container"
+                  class="jsx-665952021 jsx-3068828345 position-relative w-100 text-retrans-textarea-container"
                 >
                   <textarea
-                    class="jsx-665952021 jsx-2475499737 h-100 text-retrans-textarea"
+                    class="jsx-665952021 jsx-3068828345 h-100 text-retrans-textarea"
                   />
                 </div>
               </div>
             </div>
             <div
-              class="jsx-961098391 jsx-2475499737 d-flex flex-row align-items-center w-100 mt-3"
+              class="jsx-961098391 jsx-3068828345 d-flex flex-row align-items-center w-100 mt-3"
             >
               <div
-                class="jsx-961098391 jsx-2475499737 icon"
+                class="jsx-961098391 jsx-3068828345 icon"
               >
                 <svg
                   fill="currentColor"
@@ -302,10 +302,10 @@ exports[`Index matches snapshot 1`] = `
                 </svg>
               </div>
               <div
-                class="jsx-961098391 jsx-2475499737 d-flex flex-column text-retrans-text-container"
+                class="jsx-961098391 jsx-3068828345 d-flex flex-column text-retrans-text-container"
               >
                 <div
-                  class="jsx-961098391 jsx-2475499737 mt-3-header"
+                  class="jsx-961098391 jsx-3068828345 mt-3-header"
                 >
                   <img
                     alt="google"
@@ -315,19 +315,19 @@ exports[`Index matches snapshot 1`] = `
                   />
                 </div>
                 <div
-                  class="jsx-961098391 jsx-2475499737 position-relative w-100 text-retrans-textarea-container"
+                  class="jsx-961098391 jsx-3068828345 position-relative w-100 text-retrans-textarea-container"
                 >
                   <textarea
-                    class="jsx-961098391 jsx-2475499737 h-100 text-retrans-textarea"
+                    class="jsx-961098391 jsx-3068828345 h-100 text-retrans-textarea"
                   />
                 </div>
               </div>
             </div>
             <div
-              class="jsx-961098391 jsx-2475499737 d-flex flex-row align-items-center w-100 mt-3"
+              class="jsx-961098391 jsx-3068828345 d-flex flex-row align-items-center w-100 mt-3"
             >
               <div
-                class="jsx-961098391 jsx-2475499737 icon"
+                class="jsx-961098391 jsx-3068828345 icon"
               >
                 <svg
                   fill="currentColor"
@@ -343,10 +343,10 @@ exports[`Index matches snapshot 1`] = `
                 </svg>
               </div>
               <div
-                class="jsx-961098391 jsx-2475499737 d-flex flex-column text-retrans-text-container"
+                class="jsx-961098391 jsx-3068828345 d-flex flex-column text-retrans-text-container"
               >
                 <div
-                  class="jsx-961098391 jsx-2475499737 mt-3-header"
+                  class="jsx-961098391 jsx-3068828345 mt-3-header"
                 >
                   <img
                     alt="aws"
@@ -356,19 +356,19 @@ exports[`Index matches snapshot 1`] = `
                   />
                 </div>
                 <div
-                  class="jsx-961098391 jsx-2475499737 position-relative w-100 text-retrans-textarea-container"
+                  class="jsx-961098391 jsx-3068828345 position-relative w-100 text-retrans-textarea-container"
                 >
                   <textarea
-                    class="jsx-961098391 jsx-2475499737 h-100 text-retrans-textarea"
+                    class="jsx-961098391 jsx-3068828345 h-100 text-retrans-textarea"
                   />
                 </div>
               </div>
             </div>
             <div
-              class="jsx-961098391 jsx-2475499737 d-flex flex-row align-items-center w-100 mt-3"
+              class="jsx-961098391 jsx-3068828345 d-flex flex-row align-items-center w-100 mt-3"
             >
               <div
-                class="jsx-961098391 jsx-2475499737 icon"
+                class="jsx-961098391 jsx-3068828345 icon"
               >
                 <svg
                   fill="currentColor"
@@ -384,10 +384,10 @@ exports[`Index matches snapshot 1`] = `
                 </svg>
               </div>
               <div
-                class="jsx-961098391 jsx-2475499737 d-flex flex-column text-retrans-text-container"
+                class="jsx-961098391 jsx-3068828345 d-flex flex-column text-retrans-text-container"
               >
                 <div
-                  class="jsx-961098391 jsx-2475499737 mt-3-header"
+                  class="jsx-961098391 jsx-3068828345 mt-3-header"
                 >
                   <img
                     alt="google"
@@ -397,10 +397,10 @@ exports[`Index matches snapshot 1`] = `
                   />
                 </div>
                 <div
-                  class="jsx-961098391 jsx-2475499737 position-relative w-100 text-retrans-textarea-container"
+                  class="jsx-961098391 jsx-3068828345 position-relative w-100 text-retrans-textarea-container"
                 >
                   <textarea
-                    class="jsx-961098391 jsx-2475499737 h-100 text-retrans-textarea"
+                    class="jsx-961098391 jsx-3068828345 h-100 text-retrans-textarea"
                   />
                 </div>
               </div>

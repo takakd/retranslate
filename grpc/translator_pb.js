@@ -164,11 +164,15 @@ proto.translator.TranslateRequest.deserializeBinaryFromReader = function (
         msg.setText(value)
         break
       case 2:
-        var value = /** @type {!proto.translator.LangType} */ (reader.readEnum())
+        var value = /** @type {!proto.translator.LangType} */ (
+          reader.readEnum()
+        )
         msg.setSrclang(value)
         break
       case 3:
-        var value = /** @type {!proto.translator.LangType} */ (reader.readEnum())
+        var value = /** @type {!proto.translator.LangType} */ (
+          reader.readEnum()
+        )
         msg.setTargetlang(value)
         break
       default:
@@ -236,11 +240,9 @@ proto.translator.TranslateRequest.prototype.setText = function (value) {
  * @return {!proto.translator.LangType}
  */
 proto.translator.TranslateRequest.prototype.getSrclang = function () {
-  return /** @type {!proto.translator.LangType} */ (jspb.Message.getFieldWithDefault(
-    this,
-    2,
-    0
-  ))
+  return /** @type {!proto.translator.LangType} */ (
+    jspb.Message.getFieldWithDefault(this, 2, 0)
+  )
 }
 
 /**
@@ -256,11 +258,9 @@ proto.translator.TranslateRequest.prototype.setSrclang = function (value) {
  * @return {!proto.translator.LangType}
  */
 proto.translator.TranslateRequest.prototype.getTargetlang = function () {
-  return /** @type {!proto.translator.LangType} */ (jspb.Message.getFieldWithDefault(
-    this,
-    3,
-    0
-  ))
+  return /** @type {!proto.translator.LangType} */ (
+    jspb.Message.getFieldWithDefault(this, 3, 0)
+  )
 }
 
 /**
@@ -361,7 +361,9 @@ proto.translator.TranslateResponse.deserializeBinaryFromReader = function (
         msg.setText(value)
         break
       case 2:
-        var value = /** @type {!proto.translator.LangType} */ (reader.readEnum())
+        var value = /** @type {!proto.translator.LangType} */ (
+          reader.readEnum()
+        )
         msg.setSrclang(value)
         break
       case 3:
@@ -449,11 +451,9 @@ proto.translator.TranslateResponse.prototype.setText = function (value) {
  * @return {!proto.translator.LangType}
  */
 proto.translator.TranslateResponse.prototype.getSrclang = function () {
-  return /** @type {!proto.translator.LangType} */ (jspb.Message.getFieldWithDefault(
-    this,
-    2,
-    0
-  ))
+  return /** @type {!proto.translator.LangType} */ (
+    jspb.Message.getFieldWithDefault(this, 2, 0)
+  )
 }
 
 /**
@@ -470,25 +470,27 @@ proto.translator.TranslateResponse.prototype.setSrclang = function (value) {
  * empty, instead returning `undefined`
  * @return {!jspb.Map<string,!proto.translator.TranslatedText>}
  */
-proto.translator.TranslateResponse.prototype.getTranslatedtextlistMap = function (
-  opt_noLazyCreate
-) {
-  return /** @type {!jspb.Map<string,!proto.translator.TranslatedText>} */ (jspb.Message.getMapField(
-    this,
-    3,
-    opt_noLazyCreate,
-    proto.translator.TranslatedText
-  ))
-}
+proto.translator.TranslateResponse.prototype.getTranslatedtextlistMap =
+  function (opt_noLazyCreate) {
+    return /** @type {!jspb.Map<string,!proto.translator.TranslatedText>} */ (
+      jspb.Message.getMapField(
+        this,
+        3,
+        opt_noLazyCreate,
+        proto.translator.TranslatedText
+      )
+    )
+  }
 
 /**
  * Clears values from the map. The map will be non-null.
  * @return {!proto.translator.TranslateResponse} returns this
  */
-proto.translator.TranslateResponse.prototype.clearTranslatedtextlistMap = function () {
-  this.getTranslatedtextlistMap().clear()
-  return this
-}
+proto.translator.TranslateResponse.prototype.clearTranslatedtextlistMap =
+  function () {
+    this.getTranslatedtextlistMap().clear()
+    return this
+  }
 
 if (jspb.Message.GENERATE_TO_OBJECT) {
   /**
@@ -568,7 +570,9 @@ proto.translator.TranslatedText.deserializeBinaryFromReader = function (
         msg.setText(value)
         break
       case 2:
-        var value = /** @type {!proto.translator.LangType} */ (reader.readEnum())
+        var value = /** @type {!proto.translator.LangType} */ (
+          reader.readEnum()
+        )
         msg.setLang(value)
         break
       default:
@@ -632,11 +636,9 @@ proto.translator.TranslatedText.prototype.setText = function (value) {
  * @return {!proto.translator.LangType}
  */
 proto.translator.TranslatedText.prototype.getLang = function () {
-  return /** @type {!proto.translator.LangType} */ (jspb.Message.getFieldWithDefault(
-    this,
-    2,
-    0
-  ))
+  return /** @type {!proto.translator.LangType} */ (
+    jspb.Message.getFieldWithDefault(this, 2, 0)
+  )
 }
 
 /**
