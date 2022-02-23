@@ -34,10 +34,7 @@ export class TranslatorClient {
     this.options_ = options
   }
 
-  methodInfoTranslate = new grpcWeb.MethodDescriptor(
-    '/translator.Translator/Translate',
-    grpcWeb.MethodType.UNARY,
-    translator_pb.TranslateRequest,
+  methodInfoTranslate = new grpcWeb.AbstractClientBase.MethodInfo(
     translator_pb.TranslateResponse,
     (request: translator_pb.TranslateRequest) => {
       return request.serializeBinary()
@@ -54,7 +51,7 @@ export class TranslatorClient {
     request: translator_pb.TranslateRequest,
     metadata: grpcWeb.Metadata | null,
     callback: (
-      err: grpcWeb.RpcError,
+      err: grpcWeb.Error,
       response: translator_pb.TranslateResponse
     ) => void
   ): grpcWeb.ClientReadableStream<translator_pb.TranslateResponse>
@@ -63,7 +60,7 @@ export class TranslatorClient {
     request: translator_pb.TranslateRequest,
     metadata: grpcWeb.Metadata | null,
     callback?: (
-      err: grpcWeb.RpcError,
+      err: grpcWeb.Error,
       response: translator_pb.TranslateResponse
     ) => void
   ) {

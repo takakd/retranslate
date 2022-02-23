@@ -32,6 +32,7 @@ jobs:
 
       - run: npm run test
 
+
       # Run the below actions if the ref is equal to master.
 
       # Output build assets to ./out

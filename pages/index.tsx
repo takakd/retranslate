@@ -40,12 +40,16 @@ const Index = ({ apiUrl }: { apiUrl: string }) => {
   const [awsLoading, setAwsLoading] = useState<boolean>(false)
   const [googleLoading, setGoogleLoading] = useState<boolean>(false)
   const [awsFromAwsLoading, setAwsFromAwsLoading] = useState<boolean>(false)
-  const [googleFromAwsLoading, setGoogleFromAwsLoading] =
-    useState<boolean>(false)
-  const [awsFromGoogleLoading, setAwsFromGoogleLoading] =
-    useState<boolean>(false)
-  const [googleFromGoogleLoading, setGoogleFromGoogleLoading] =
-    useState<boolean>(false)
+  const [googleFromAwsLoading, setGoogleFromAwsLoading] = useState<boolean>(
+    false
+  )
+  const [awsFromGoogleLoading, setAwsFromGoogleLoading] = useState<boolean>(
+    false
+  )
+  const [
+    googleFromGoogleLoading,
+    setGoogleFromGoogleLoading,
+  ] = useState<boolean>(false)
 
   // Interval in millisecond when firing the textbox event.
   const interval = 2000
